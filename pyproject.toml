@@ -1,0 +1,25 @@
+[project]
+name = "yowd"
+version = "0.1.0"
+description = "Your Order We Deliver (YOWD) - SWE30003 Assignment 3"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+
+[tool.ruff.lint]
+# E/W = pycodestyle (PEP 8), F = pyflakes, N = pep8-naming,
+# D = pydocstyle (PEP 257), I = import order, UP = modern syntax
+select = ["E", "W", "F", "N", "D", "I", "UP"]
+ignore = ["D203", "D213"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
